@@ -1,11 +1,9 @@
-title: Pages
-template: templates/pages/entry
+title: Blogs
+template: templates/blogs/entry
 layout: layouts/base
 revisions: false
-route: '{parent_uri}/{slug}'
+route: 'blogs/{slug}'
 sort_dir: asc
 date_behavior:
   past: public
   future: private
-structure:
-  root: true
