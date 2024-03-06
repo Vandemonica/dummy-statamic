@@ -1,9 +1,0 @@
-title: Blogs
-template: templates/blogs/entry
-layout: layouts/base
-revisions: false
-route: 'blogs/{slug}'
-sort_dir: asc
-date_behavior:
-  past: public
-  future: private
