@@ -14,6 +14,9 @@ return [
     'resources' => [
         \App\Models\Blog::class => [
             'name' => 'Blogs',
+            'route' => '/blogs/{{ slug }}',
+            'template' => 'templates/blogs/entry',
+            'layout' => 'layouts/base',
         ],
     ],
 

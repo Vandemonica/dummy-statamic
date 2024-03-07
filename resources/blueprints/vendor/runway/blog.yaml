@@ -56,4 +56,22 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+  sidebar:
+    display: Sidebar
+    sections:
+      -
+        display: 'New Section'
+        fields:
+          -
+            handle: slug
+            field:
+              input_type: text
+              antlers: false
+              type: text
+              display: Slug
+              listable: hidden
+              instructions_position: above
+              visibility: visible
+              replicator_preview: true
+              hide_display: false
 title: Blog
