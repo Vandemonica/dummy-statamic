@@ -1,0 +1,13 @@
+{{ paginate }}
+  <p style="text-align: center;">
+    {{ if prev_page }}
+      <a href="{{ prev_page }}">Previous</a>
+    {{ /if }}
+
+    <span>Page {{ current_page }} of {{ total_pages }}</span>
+
+    {{ if next_page }}
+      <a href="{{ next_page }}">Next</a>
+    {{ /if }}
+  </p>
+{{ /paginate }}

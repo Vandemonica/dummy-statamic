@@ -1,0 +1,38 @@
+<header class="masthead" style="background-image: url('{{ link to='assets/images/home-bg.jpg' absolute='true' }}')">
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="site-heading">
+          <h1>{{ title }}</h1>
+          <span class="subheading">{{ body|bard_html }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container px-4 px-lg-5">
+  <div class="row gx-4 gx-lg-5 justify-content-center">
+    <div class="col-md-10 col-lg-8 col-xl-7">
+      {{ runway:blog sort="created_at:desc" limit="4" }}
+        <div class="post-preview">
+          <a href="{{ url }}">
+            <h2 class="post-title">{{ title }}</h2>
+            <h3 class="post-subtitle">{{ subtitle }}</h3>
+          </a>
+          <p class="post-meta">
+            Posted by on {{ created_at|format('F jS, Y') }}
+          </p>
+        </div>
+
+        <hr class="my-4" />
+      {{ /runway:blog }}
+
+      <div class="d-flex justify-content-end mb-4">
+        <a class="btn btn-primary text-uppercase" href="{{ link to='blogs' absolute='true' }}">
+          Other Posts →
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
