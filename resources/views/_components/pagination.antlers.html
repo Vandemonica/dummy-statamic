@@ -1,13 +1,18 @@
 {{ paginate }}
-  <p style="text-align: center;">
+  <p style="text-align: center; margin-bottom: 8px;">
     {{ if prev_page }}
       <a href="{{ prev_page }}">Previous</a>
     {{ /if }}
 
-    <span>Page {{ current_page }} of {{ total_pages }}</span>
+    {{ links:all }}
+      <a href="{{ url }}" class="ms-2" {{ page == current_page ? 'style="text-decoration: none; pointer-events: none;"' : '' }}>{{ page }}</a>
+    {{ /links:all }}
 
     {{ if next_page }}
-      <a href="{{ next_page }}">Next</a>
+      <a href="{{ next_page }}" class="ms-2">Next</a>
     {{ /if }}
+  </p>
+  <p style="text-align: center; margin-top: 0;">
+    <small>Page {{ current_page }} of {{ total_pages }}</small>
   </p>
 {{ /paginate }}

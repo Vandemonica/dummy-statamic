@@ -13,9 +13,16 @@ class MainController extends Controller
         $homepage = Page::where('slug', 'homepage')->get()->toArray();
 
         if (empty($homepage)) {
-            return [
-                'message' => 'Please create a *Page* entry with *homepage* as its slug'
-            ];
+            $homepage = [[
+                'title' => "Oh noooooo, we don't have homepage",
+                'body' => [[
+                    'type' => 'paragraph',
+                    'content' => [[
+                        'text' => 'Please create a *Page* entry with *homepage* as its slug on the control-panel, thank you',
+                        'type' => 'text'
+                    ]]
+                ]]
+            ]];
         }
 
         return (new View)
@@ -32,5 +39,15 @@ class MainController extends Controller
             ->with([
                 'title' => 'Blogs'
             ]);
+    }
+
+    public function login()
+    {
+        return (new View)->template('auth/login')->layout('layouts/base');
+    }
+
+    public function register()
+    {
+        return (new View)->template('auth/register')->layout('layouts/base');
     }
 }

@@ -14,7 +14,7 @@
 <div class="container px-4 px-lg-5">
   <div class="row gx-4 gx-lg-5 justify-content-center">
     <div class="col-md-10 col-lg-8 col-xl-7">
-      {{ runway:blog as="blogs" paginate="true" sort="created_at:desc" limit="6" }}
+      {{ runway:blog as="blogs" paginate="4" sort="created_at:desc" limit="6" }}
         {{ if no_results }}
           <p style="text-align: center;">Blog results not found</p>
         {{ /if }}

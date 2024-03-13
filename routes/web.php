@@ -22,3 +22,6 @@ use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class, 'index']);
 Route::get('/blogs', [MainController::class, 'blogs']);
+
+Route::get('/auth/login', [MainController::class, 'login']);
+Route::get('/auth/register', [MainController::class, 'register']);
