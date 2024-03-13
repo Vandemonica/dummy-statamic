@@ -6382,16 +6382,16 @@
         },
         {
             "name": "statamic-rad-pack/runway",
-            "version": "v6.4.1",
+            "version": "v6.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic-rad-pack/runway.git",
-                "reference": "1a0b8382d3b1a5d2ac0cc8c47de8ea60f16ae1fa"
+                "reference": "f4e27ae5cb0884aba1bca82f3528e7979c216131"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic-rad-pack/runway/zipball/1a0b8382d3b1a5d2ac0cc8c47de8ea60f16ae1fa",
-                "reference": "1a0b8382d3b1a5d2ac0cc8c47de8ea60f16ae1fa",
+                "url": "https://api.github.com/repos/statamic-rad-pack/runway/zipball/f4e27ae5cb0884aba1bca82f3528e7979c216131",
+                "reference": "f4e27ae5cb0884aba1bca82f3528e7979c216131",
                 "shasum": ""
             },
             "require": {
@@ -6443,22 +6443,22 @@
             "description": "Eloquently manage your database models in Statamic.",
             "support": {
                 "issues": "https://github.com/statamic-rad-pack/runway/issues",
-                "source": "https://github.com/statamic-rad-pack/runway/tree/v6.4.1"
+                "source": "https://github.com/statamic-rad-pack/runway/tree/v6.6.0"
             },
-            "time": "2024-03-04T20:51:35+00:00"
+            "time": "2024-03-11T10:25:37+00:00"
         },
         {
             "name": "statamic/cms",
-            "version": "v4.51.0",
+            "version": "v4.53.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "d2dc38494d672fcff6e962f0a4742763d33dd49b"
+                "reference": "d7f7f29b5fade92a27678ab9aff317103ab5821d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/d2dc38494d672fcff6e962f0a4742763d33dd49b",
-                "reference": "d2dc38494d672fcff6e962f0a4742763d33dd49b",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/d7f7f29b5fade92a27678ab9aff317103ab5821d",
+                "reference": "d7f7f29b5fade92a27678ab9aff317103ab5821d",
                 "shasum": ""
             },
             "require": {
@@ -6541,7 +6541,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v4.51.0"
+                "source": "https://github.com/statamic/cms/tree/v4.53.1"
             },
             "funding": [
                 {
@@ -6549,7 +6549,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-02-28T15:24:29+00:00"
+            "time": "2024-03-12T14:39:08+00:00"
         },
         {
             "name": "statamic/stringy",
