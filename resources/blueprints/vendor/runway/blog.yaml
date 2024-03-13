@@ -6,16 +6,10 @@ tabs:
         fields:
           -
             handle: title
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Title
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+            field: common.title
+          -
+            handle: subtitle
+            field: common.subtitle
           -
             handle: body
             field:
@@ -56,22 +50,20 @@ tabs:
               visibility: visible
               replicator_preview: true
               hide_display: false
+      -
+        display: SEO
+        fields:
+          -
+            import: meta_tags
   sidebar:
     display: Sidebar
     sections:
       -
-        display: 'New Section'
         fields:
           -
             handle: slug
-            field:
-              input_type: text
-              antlers: false
-              type: text
-              display: Slug
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
+            field: common.slug
+          -
+            handle: image
+            field: common.image
 title: Blog

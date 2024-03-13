@@ -1,0 +1,42 @@
+title: 'Meta Tags'
+fields:
+  -
+    handle: meta_title
+    field:
+      input_type: text
+      antlers: false
+      type: text
+      display: 'Meta Title'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: meta_body
+    field:
+      antlers: false
+      type: textarea
+      display: 'Meta Body'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
+  -
+    handle: meta_image
+    field:
+      max_files: 1
+      mode: list
+      container: images
+      restrict: false
+      allow_uploads: true
+      show_filename: true
+      show_set_alt: true
+      type: assets
+      display: 'Meta Image'
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      replicator_preview: true
+      hide_display: false
