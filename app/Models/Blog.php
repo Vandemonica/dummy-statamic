@@ -15,5 +15,7 @@ class Blog extends Model
 
     protected $casts = [
         'body' => 'array',
+        'image' => 'array',
+        'meta_image' => 'array',
     ];
 }

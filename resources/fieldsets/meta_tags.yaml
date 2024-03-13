@@ -27,7 +27,7 @@ fields:
     handle: meta_image
     field:
       max_files: 1
-      mode: list
+      mode: grid
       container: images
       restrict: false
       allow_uploads: true

@@ -15,6 +15,8 @@ class Page extends Model
 
     protected $casts = [
         'body' => 'array',
+        'accordion_blocks' => 'array',
+        'meta_image' => 'array',
     ];
 
 }
