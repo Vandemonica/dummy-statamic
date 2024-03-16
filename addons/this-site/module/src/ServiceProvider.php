@@ -18,6 +18,10 @@ class ServiceProvider extends AddonServiceProvider
         __DIR__ . '/../resources/js/scripts.js'
     ];
 
+    protected $tags = [
+        \ThisSite\Module\Tags\GlobalTags::class
+    ];
+
     public function bootAddon()
     {
         Statamic::afterInstalled(function ($command) {
