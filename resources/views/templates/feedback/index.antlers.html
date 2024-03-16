@@ -1,0 +1,62 @@
+{{ if not logged_in }}
+  {{ redirect to="/auth/login" }}
+{{ /if }}
+
+
+<form action="{{ route:feedback.insert }}" method="post">
+  {{ csrf_field }}
+  <input type="hidden" name="created_by" value="{{ current_user:id }}">
+
+  <header class="masthead" style="background-image: url('{{ link to='assets/images/contact.jpg' absolute='true' }}')">
+    <div class="container position-relative px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <div class="page-heading">
+            <h1>Feedback</h1>
+            <span class="subheading">Send a feedback to make us better</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="mb-4">
+    <div class="container px-4 px-lg-5">
+      <div class="row gx-4 gx-lg-5 justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-7">
+          <div class="my-5">
+            <div class="form-floating">
+              <input class="form-control" id="title" type="text" name="title" placeholder="Feedback title" value="{{ old:title }}">
+              <label for="title">Title</label>
+            </div>
+
+            <div class="form-floating">
+              <textarea class="form-control" id="body" name="body" placeholder="Feedback description" value="{{ old:body }}" style="min-height: 180px;"></textarea>
+              <label for="body">Description</label>
+            </div>
+
+            <br>
+
+            {{ if {session:success} }}
+              <div>
+                <div class="text-center fw-bolder mb-3">
+                  {{ session:success }}<br>
+                </div>
+              </div>
+            {{ /if }}
+
+            {{ if {session:error} }}
+              <div>
+                <div class="text-center text-danger mb-3">
+                  {{ session:error }}<br>
+                </div>
+              </div>
+            {{ /if }}
+
+            <button class="btn btn-primary text-uppercase" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</form>

@@ -1,0 +1,19 @@
+{
+    "name": "this-site/module",
+    "autoload": {
+        "psr-4": {
+            "ThisSite\\Module\\": "src"
+        }
+    },
+    "extra": {
+        "statamic": {
+            "name": "Module",
+            "description": "Module addon"
+        },
+        "laravel": {
+            "providers": [
+                "ThisSite\\Module\\ServiceProvider"
+            ]
+        }
+    }
+}

@@ -4,6 +4,7 @@ use Statamic\Facades\Entry;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\FeedbackController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,6 @@ Route::get('/blogs', [MainController::class, 'blogs']);
 
 Route::get('/auth/login', [MainController::class, 'login']);
 Route::get('/auth/register', [MainController::class, 'register']);
+
+Route::get('/feedback', [FeedbackController::class, 'index']);
+Route::post('/feedback/insert', [FeedbackController::class, 'insert'])->name('feedback.insert');
