@@ -11,4 +11,8 @@ class Site extends Model
     use HasRunwayResource;
 
     protected $fillable = ['site_name'];
+
+    protected $casts = [
+        'meta_image' => 'array',
+    ];
 }
