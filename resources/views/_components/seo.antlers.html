@@ -1,7 +1,7 @@
 {{ favicon = {link to='assets/favicon.ico' absolute='true'} }}
-{{ seo_title = meta_title ?? title ?? 'Welcome To' }}
-{{ seo_description = {meta_body|truncate(120, '...')} ?? {body|raw|bard_text|truncate(120, '...')} }}
-{{ seo_image = meta_image:url ?? image:url ?? favicon }}
+{{ seo_title = {meta_title ?? title ?? global:meta_title}|truncate(120, '...')} }}
+{{ seo_description = {meta_body ?? body|raw|bard_text ?? global:meta_body}|truncate(120, '...')} }}
+{{ seo_image = meta_image:url ?? image:url ?? global:meta_image }}
 
 
 <link rel="home" href="{{ config:app:url }}">
