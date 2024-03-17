@@ -5,7 +5,7 @@ if (url.includes('/cp/runway/site/1')) {
     if (document.readyState == 'complete') {
       document.getElementsByClassName('breadcrumb flex')[0].style.cssText = 'display: none !important;';
       document.getElementsByClassName('dropdown-list text-left')[0].style.cssText = 'display: none !important;';
-      document.getElementsByName('save_and_continue_options')[0].checked = true;
+      document.getElementsByName('save_and_continue_options')[1].click();
     }
   }
 }

@@ -25,9 +25,11 @@ class ServiceProvider extends AddonServiceProvider
     public function bootAddon()
     {
         Statamic::afterInstalled(function ($command) {
-            Site::firstOrCreate([
-                'site_name' => config('app.name')
-            ]);
+            $data = Site::first();
+
+            if ($data == null) {
+                Site::create(['site_name' => config('app.name')]);
+            }
         });
 
         $this->registerCpRoutes(function () {
